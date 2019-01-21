@@ -7,14 +7,15 @@ public class TokenPass {
         this.pcount = playercount;
     }
 
-    public boolean gameOver() {
+    public int gameOver() {
         for(int i = 0; i < pcount; i++)
         {
             if(tokens[i] == 0)
             {
-                
+                return i;
             }
         }
+        return 0;
     }
 
     public void printBoard() {
